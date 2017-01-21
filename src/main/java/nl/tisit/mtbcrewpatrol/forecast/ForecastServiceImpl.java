@@ -498,21 +498,21 @@ public class ForecastServiceImpl implements ForecastService {
 	}
 	
 	
-	private Map<Integer, VisitorsForecast> forcast14DayTracksLocal(String model) throws IOException, DatatypeConfigurationException {
-		Map<Integer, VisitorsForecast> forecast = new TreeMap<Integer, VisitorsForecast>();
-	
-		HolidayList holidayList = keyRegisterService.getHolidayList();
-	
-		Settings settings = settingsRepository.findByParameter("model");
-
-		WeatherForecast weatherForecast = this.weatherForecastService.buildWeatherForecast();
-
-		for (Track track : trackRepository.findAll()) {
-//			forecast.put(track.getId(), forcast14DayTrack(track, holidayList, weatherForecast, settings.getDateValue()));
-		}
-
-		return forecast;
-	}
+//	private Map<Integer, VisitorsForecast> forcast14DayTracksLocal(String model) throws IOException, DatatypeConfigurationException {
+//		Map<Integer, VisitorsForecast> forecast = new TreeMap<Integer, VisitorsForecast>();
+//	
+////		HolidayList holidayList = keyRegisterService.getHolidayList();
+//	
+////		Settings settings = settingsRepository.findByParameter("model");
+//
+////		WeatherForecast weatherForecast = this.weatherForecastService.buildWeatherForecast();
+////
+////		for (Track track : trackRepository.findAll()) {
+//////			forecast.put(track.getId(), forcast14DayTrack(track, holidayList, weatherForecast, settings.getDateValue()));
+////		}
+//
+//		return forecast;
+//	}
 	
 	@Override
 	public Map<Integer, VisitorsForecast> forcast14DayTracks() throws IOException, DatatypeConfigurationException {
